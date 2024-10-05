@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+body {
+	background-color: lightblue;
+	color: #333;
+	font-family: "Roboto Mono", monospace;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	overflow: hidden;
+}
+
+h1 {
+	color: grey;
+	font-size: 2rem;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 70px;
+}
+
+.generator {
+	background-color: #ffffff;
+	width: 300px;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	animation: fadeInUp 1s ease;
+}
+
+div.password {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+div.password input {
+	padding: 7px 10px;
+	background-color: #e0e0e0;
+	border: none;
+	color: #333;
+	flex-grow: 1;
+	border-radius: 10px 0 0 10px;
+	font-size: 1.2rem;
+}
+
+div.password button {
+	border-radius: 0 10px 10px 0;
+	transition: background-color 0.3s ease;
+}
+
+div.range {
+	margin: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+div.range span {
+	background-color: #ddd;
+	padding: 10px;
+	min-width: 30px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+div.options {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+    margin-top: 30px;
+}
+
+div.options label {
+	background-color: #e0e0e0;
+	padding: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	width: 45%;
+	text-align: center;
+	font-family: sans-serif;
+	transition: background-color 0.3s ease;
+}
+
+label:hover {
+	background-color: #d4d4d4;
+}
+
+button {
+	background-color: lightblue;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	width: 100%;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: green;
+}
+
+button:active {
+	transform: scale(0.98);
+}
+
+button.generate {
+	margin-top: 50px;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+div.password button:active {
+	background-color: green;
+}
+
+/* Success message after copying */
+#copySuccess {
+	display: none;
+	color: green;
+	text-align: center;
+	font-weight: bold;
+	animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
